@@ -21,13 +21,6 @@ jobs:
 
       # Add additional steps for testing if needed
 
-      - name: Deploy to EC2
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.EC2_HOST }}
-          username: ${{ secrets.EC2_USERNAME }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          port: ${{ secrets.EC2_SSH_PORT }}  # Adjust if needed
-          script: |
-            sudo rm -rf /var/www/html/*  # Remove existing files
-            scp -r ./out/* ${{ secrets.EC2_USERNAME }}@${{ secrets.EC2_HOST }}:/var/www/html/  # Copy built files
+      - name: Deploy to Hosting Service
+        run: |
+          # Add commands to deploy your Next.js app
