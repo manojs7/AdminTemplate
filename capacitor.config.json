@@ -1,0 +1,8 @@
+{
+  "appId": "com.caterninja.app",
+  "appName": "OMS",
+  "webDir": "public",
+  "server": {
+    "androidScheme": "https"
+  }
+}
